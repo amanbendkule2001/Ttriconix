@@ -1,0 +1,80 @@
+* { box-sizing: border-box; }
+        html { font-size: 16px; line-height: 1.5; }
+        
+        /* Zoom-proof mobile menu */
+        #menu { 
+            max-height: 0; 
+            overflow: hidden; 
+            transition: all 0.3s ease; 
+            opacity: 0;
+        }
+        #menu.open { 
+            max-height: 80vh; 
+            opacity: 1; 
+        }
+        #careers-sub { 
+            max-height: 0; 
+            overflow: hidden; 
+            transition: max-height 0.3s ease; 
+        }
+        #careers-sub.open { 
+            max-height: 40vh; 
+        }
+        
+        /* Desktop dropdown - zoom safe */
+        .dropdown:hover .dropdown-menu { 
+            display: block; 
+        }
+        
+        /* Navbar container - prevents overflow */
+        .navbar-container {
+            display: flex;
+            flex-wrap: nowrap;
+            min-width: 0;
+        }
+body {
+  background: #f8fafc;
+  color: #1f2937;
+}
+
+/* Container */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(to right, #2563eb, #3b82f6);
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* Cards */
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  padding: 10px 16px;
+  background: #2563eb;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    padding: 40px 10px;
+  }
+}
